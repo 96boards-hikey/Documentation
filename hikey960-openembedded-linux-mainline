@@ -1,8 +1,8 @@
-This document describes how to build a kernel and test it with OpenEmbedded Linux root filesystem. Target board is HiKey960.
+This document describes how to build a kernel and test it with OpenEmbedded(OE) Linux root filesystem. Target board is HiKey960.
 
 Authored by: Guodong Xu <guodong.xu@linaro.org>
 
-### Step 1: Know the Kernel source repository
+### Step 1: Know the Kernel source repository, and Make
 Kernel source code for HiKey960 (and other types of HiKey boards) is kept in this repository:
 https://github.com/96boards-hikey/linux/
 
@@ -16,6 +16,12 @@ Note:
 * Yes, I do forced-update to hikey960-upstream-rebase
 * For history versions, I tagged them. Please find in https://github.com/96boards-hikey/linux/releases, with release names in format: working-hikey960-upstream-rebase-[version]-[date]. Eg. working-hikey960-upstream-rebase-v4.14-rc5-2017-10-18
 
+To make a kernel for OE,
+```bash
+make defconfig
+make Image
+make hisilicon/hi3660-hikey960.dtb
+```
 
 ### Step 2: Download OpenEmbedded Snapshot Builds
 Linaro makes this OpenEmbedded build: http://snapshots.linaro.org/reference-platform/embedded/morty/hikey960/
