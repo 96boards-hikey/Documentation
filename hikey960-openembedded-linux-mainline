@@ -57,8 +57,9 @@ Note:
 Follow the examples in Step 2, what you need to do is:
 
 ```bash
+gunzip rpb-console-image-lava-hikey960-20171013132920-99.rootfs.img.gz
 fastboot flash boot boot-0.0+AUTOINC+ba45819943-ea12986b87-r0-hikey960-20171013132920-99.uefi.img
-fastboot flash system rpb-console-image-lava-hikey960-20171013132920-99.rootfs.img.gz
+fastboot flash system rpb-console-image-lava-hikey960-20171013132920-99.rootfs.img
 ```
 
 ### Step 6: Reboot
